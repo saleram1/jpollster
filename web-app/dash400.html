@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Whirring Pollster</title>
+<style type="text/css" media="screen">
+/*margin and padding on body element
+  can introduce errors in determining
+  element position and are not recommended;
+  we turn them off as a foundation for YUI
+  CSS treatments. */
+body {
+	margin:0;
+	padding:0;
+}
+    #applicationTabs ul.yui-nav li span.close {
+        background-image: url(http://us.i1.yimg.com/us.yimg.com/i/nt/ic/ut/alt3/close12_1.gif);
+        text-indent: 500px;
+        display: block;
+        overflow: hidden;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: 2px;
+        right: 2px;
+    }
+</style>
+
+<!-- Individual YUI CSS files -->
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/fonts/fonts-min.css">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/grids/grids-min.css">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/menu/assets/skins/sam/menu.css">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/button/assets/skins/sam/button.css">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/paginator/assets/skins/sam/paginator.css">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/datatable/assets/skins/sam/datatable.css">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/layout/assets/skins/sam/layout.css">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/logger/assets/skins/sam/logger.css">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/tabview/assets/skins/sam/tabview.css">
+
+<!-- Individual YUI JS files DO NOT EVEN THINK ABOUT changing the ordering -->
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.0r4/build/utilities/utilities.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.0r4/build/container/container_core-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.0r4/build/menu/menu-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.0r4/build/button/button-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.0r4/build/connection/connection_core-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.0r4/build/paginator/paginator-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.0r4/build/datasource/datasource-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.0r4/build/datatable/datatable-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.0r4/build/layout/layout-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.0r4/build/logger/logger-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.0r4/build/tabview/tabview-min.js"></script>
+
+<!-- YUI-CMS Extension: Bubbling Library --> 
+<script type="text/javascript" src="http://js.bubbling-library.com/2.1/build/dispatcher/dispatcher.js"></script> 
+
+<style>
+    #productsandservices2 {        
+        position: static;
+    }
+
+    #productsandservices2 .yuimenu .yuimenuitemlabel {
+        _zoom: normal;
+    }
+
+    .yui-skin-sam .yui-layout .yui-layout-unit-top div.yui-layout-bd {
+        border: none;
+    }
+
+    .yui-skin-sam .yuimenu .bd {
+/*        background-color: #99CCFF; */
+        background-color: #FFFFF0;
+    }
+
+    #productsandservices2 .bd {
+        border: none;
+    }
+
+    #productsandservices2 .bd .first-of-type .bd {
+        border: 1px solid #808080;
+    }
+</style>
+<!--  Grails generated block -->
+        <script type="text/javascript" src="/pollster/js/application.js"></script>
+        <script type='text/javascript' src='/pollster/plugins/modalbox-0.4/js/modalbox/prototype.js'></script>
+	<script type='text/javascript' src='/pollster/plugins/modalbox-0.4/js/modalbox/scriptaculous.js?load=effects'></script>
+	<script type='text/javascript' src='/pollster/plugins/modalbox-0.4/js/modalbox/modalbox.js'></script>
+	<link rel='stylesheet' href='/pollster/plugins/modalbox-0.4/css/modalbox.css' />
+  
+</head>
+
+<body class="yui-skin-sam">
+
+<div id="top1">
+  <img src="images/jpollster-main.gif" ?>
+</div>
+
+<div id="center1">
+<div id="applicationTabs" class="yui-navset">
+  <ul class="yui-nav">
+    <li class="selected">
+      <a href="#tab1"><em>Recent</em></a>
+    </li>
+  </ul>
+
+  <div class="yui-content" style="background-color: #FFFFF0;">
+  <div>
+    <h3>&nbsp;</h3>
+    <p>
+      You have no recent messages.  Click<span id="addTabButton"><a href="#">here</a></span>
+    </p>
+  </div>
+</div>
+</div>
+
+<div id="right1">
+    <b>Use YAHOO.log( &quot;Helpful message to ponder here...&quot;, &quot;category&lt;info/warn/error&gt;&quot; );</b>
+
+<script>
+    var myLogReader = new YAHOO.widget.LogReader( "right1" );
+</script>
+</div>
+
+</div>
+
+<!-- main script tag here -->
+<script type="text/javascript">
+var m_myTabs = null;
+
+(function() {
+var initTabView = function() {
+    var t_counter = 0;  // iterator for new tab labels
+    
+    m_myTabs = new YAHOO.widget.TabView( "applicationTabs" );
+
+    var handleClose = function(e, tab) {
+        YAHOO.util.Event.preventDefault(e);
+        if ( window.confirm('Document is not saved.  Are you sure?' ) ) m_myTabs.removeTab(tab);
+    };
+    
+    function addTab(e) {
+        YAHOO.util.Event.preventDefault(e);
+        t_counter++;    
+        var newTab = new YAHOO.widget.Tab({
+            label: "Top of the Pops" + '&nbsp;&nbsp;&nbsp;&nbsp;<span class="close">X</span>',
+            dataSrc: "http://localhost:8080/pollster/dashboard/agileTeams", 
+            cacheData: false
+        });        
+        //this.addTab(newTab);
+        YAHOO.plugin.Dispatcher.delegate( newTab, m_myTabs );
+        YAHOO.util.Event.on(newTab.getElementsByClassName('close')[0], 'click', handleClose, newTab);
+    };
+
+    m_myTabs.on('contentReady', function() { // ensure Tabs exist before accessing - THIS SIMPLY ADDS THE handleClose CALLBACK
+        YAHOO.util.Dom.batch(m_myTabs.get('tabs'), function(tab) {
+            YAHOO.util.Event.on(tab.getElementsByClassName('close')[0], 'click', handleClose, tab);
+        });
+        
+    YAHOO.util.Event.on('addTabButton', 'click', addTab, m_myTabs, true);
+    });
+}();
+
+     YAHOO.util.Event.onDOMReady(function() {
+        var layout = new YAHOO.widget.Layout({
+            units: [
+                { position: 'top', height: 80, body: 'top1', scroll: null, zIndex: 2 },
+                { position: 'right', header: 'Messages', width: 325, resize: true, collapse: true, scroll: true, body: 'right1', animate: true, gutter: '5' },
+
+                { position: 'center', body: 'center1', gutter: '5 0' }
+            ]
+        });
+        
+        layout.on('render', function() {
+            YAHOO.util.Event.onContentReady("center1", initTabView );
+        });
+        
+        layout.render();
+    });
+})();
+
+/*
+ * AjaxObject is a hypothetical object that encapsulates the transaction
+ *     request and callback logic.
+ *
+ * handleSuccess( ) provides success case logic
+ * handleFailure( ) provides failure case logic
+ * success and failure handlers
+ * startRequest( ) calling this member starts the transaction request.
+ */
+var AjaxObject = {
+	handleSuccess:function(o) {
+	    YAHOO.log('POST was a success - setting content of active tab', 'info');
+	    m_myTabs.get( "activeTab" ).set( "dataSrc", null );
+	    m_myTabs.get( "activeTab" ).set( "content", o.responseText );
+	},
+
+	handleFailure:function(o) {
+	    //TODO: Failure handler
+	    window.alert( "Result: " + o.status );
+	},
+
+	startRequest:function(url, args) {
+	   YAHOO.util.Connect.asyncRequest('POST', url, callback, null);
+	}
+};
+
+/*
+ * Define the callback object for success and failure
+ * handlers as well as object scope.
+ */
+var callback = {
+    success: AjaxObject.handleSuccess,
+    failure: AjaxObject.handleFailure,
+    timeout: 5000,
+    scope:   AjaxObject
+};
+</script>
+</body>
+</html>
